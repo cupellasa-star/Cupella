@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>cupella | أكواب مميزة</title>
+
+<style>
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+font-family: Arial, sans-serif;
+background: #faf8f4;
+color: #333;
+}
+
+/* ================= HEADER ================= */
+
+header {
+background: rgba(255,255,255,0.96);
+padding: 18px 7%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-bottom: 1px solid #eee;
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+.logo {
+font-size: 29px;
+font-weight: bold;
+color: #5c725f;
+letter-spacing: 1px;
+}
+
+nav a {
+text-decoration: none;
+color: #444;
+margin-right: 22px;
+font-size: 15px;
+}
+
+nav a:hover {
+color: #5c725f;
+}
+
+.header-icons {
+display: flex;
+align-items: center;
+gap: 15px;
+}
+
+.icon-button {
+border: none;
+background: transparent;
+cursor: pointer;
+font-size: 22px;
+position: relative;
+}
+
+.cart-count {
+position: absolute;
+top: -8px;
+right: -8px;
+background: #5c725f;
+color: white;
+font-size: 11px;
+width: 19px;
+height: 19px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+min-height: 480px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 65px 8%;
+gap: 40px;
+}
+
+.hero-text {
+max-width: 560px;
+}
+
+.hero-text h1 {
+font-size: 58px;
+color: #4f6653;
+margin-bottom: 12px;
+}
+
+.hero-text h2 {
+font-size: 25px;
+font-weight: normal;
+margin-bottom: 18px;
+}
+
+.hero-text p {
+color: #777;
+line-height: 1.9;
+margin-bottom: 28px;
+}
+
+.shop-button {
+display: inline-block;
+background: #5c725f;
+color: white;
+padding: 14px 30px;
+border-radius: 30px;
+text-decoration: none;
+}
+
+.hero-decoration {
+font-size: 135px;
+text-align: center;
+}
+
+/* ================= SEARCH ================= */
+
+.search-section {
+background: white;
+padding: 25px 7%;
+}
+
+.search-box {
+max-width: 650px;
+margin: auto;
+position: relative;
+}
+
+.search-box input {
+width: 100%;
+padding: 16px 50px 16px 20px;
+border: 1px solid #ddd;
+border-radius: 30px;
+outline: none;
+font-size: 15px;
+}
+
+.search-box span {
+position: absolute;
+right: 20px;
+top: 13px;
+font-size: 22px;
+}
+
+/* ================= PRODUCTS ================= */
+
+.products-section {
+padding: 65px 7%;
+background: white;
+}
+
+.section-title {
+text-align: center;
+margin-bottom: 40px;
+}
+
+.section-title h2 {
+font-size: 32px;
+color: #4f6653;
+margin-bottom: 10px;
+}
+
+.section-title p {
+color: #888;
+}
+
+.products {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+gap: 25px;
+}
+
+.product {
+background: #faf8f4;
+border-radius: 20px;
+padding: 15px;
+border: 1px solid #eee;
+transition: .25s;
+cursor: pointer;
+}
+
+.product:hover {
+transform: translateY(-5px);
+}
+
+.product-image {
+width: 100%;
+height: 250px;
+background: #eee;
+border-radius: 16px;
+display: flex;
+align-items: center;
+justify-content: center;
+color: #999;
+margin-bottom: 15px;
+overflow: hidden;
+}
+
+/* مكان الصور - نستبدلها بكرا */
+.product-image img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.product h3 {
+margin-bottom: 8px;
+color: #444;
+font-size: 18px;
+}
+
+.product-description {
+color: #777;
+font-size: 14px;
+line-height: 1.7;
+min-height: 45px;
+}
+
+.price {
+color: #5c725f;
+font-size: 20px;
+font-weight: bold;
+margin: 13px 0;
+}
+
+.stock {
+font-size: 13px;
+color: #777;
+margin-bottom: 12px;
+}
+
+.order-button {
+display: block;
+width: 100%;
+border: none;
+background: #5c725f;
+color: white;
+padding: 11px;
+border-radius: 25px;
+cursor: pointer;
+font-size: 14px;
+}
+
+.order-button:hover {
+background: #425546;
+}
+
+/* ================= SUGGESTIONS ================= */
+
+.suggestions {
+padding: 60px 7%;
+background: #faf8f4;
+}
+
+.suggestions h2 {
+text-align: center;
+color: #4f6653;
+margin-bottom: 30px;
+}
+
+/* ================= ABOUT ================= */
+
+.about {
+padding: 70px 10%;
+text-align: center;
+background: white;
+}
+
+.about h2 {
+color: #4f6653;
+margin-bottom: 20px;
+}
+
+.about p {
+max-width: 680px;
+margin: auto;
+line-height: 2;
+color: #666;
+}
+
+/* ================= CONTACT ================= */
+
+.contact {
+background: #eef2ed;
+padding: 60px 10%;
+text-align: center;
+}
+
+.contact h2 {
+color: #4f6653;
+margin-bottom: 15px;
+}
+
+.delivery-note {
+margin-top: 18px;
+font-weight: bold;
+color: #5c725f;
+}
+
+.contact a {
+display: inline-block;
+margin: 15px 7px;
+text-decoration: none;
+color: white;
+background: #5c725f;
+padding: 12px 25px;
+border-radius: 25px;
+}
+
+/* ================= MODAL PRODUCT ================= */
+
+.modal {
+display: none;
+position: fixed;
+inset: 0;
+background: rgba(0,0,0,.45);
+z-index: 2000;
+align-items: center;
+justify-content: center;
+padding: 20px;
+}
+
+.modal-content {
+background: white;
+width: 100%;
+max-width: 500px;
+max-height: 90vh;
+overflow-y: auto;
+border-radius: 25px;
+padding: 25px;
+position: relative;
+}
+
+.close {
+position: absolute;
+left: 20px;
+top: 15px;
+border: none;
+background: transparent;
+font-size: 25px;
+cursor: pointer;
+}
+
+.modal-image {
+height: 280px;
+background: #eee;
+border-radius: 18px;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom: 20px;
+color: #999;
+}
+
+.modal-content h2 {
+color: #4f6653;
+margin-bottom: 10px;
+}
+
+.modal-content p {
+color: #777;
+line-height: 1.8;
+margin-bottom: 15px;
+}
+
+.variant-label {
+display: block;
+margin-bottom: 8px;
+font-weight: bold;
+}
+
+.variant-select {
+width: 100%;
+padding: 12px;
+border-radius: 12px;
+border: 1px solid #ddd;
+margin-bottom: 15px;
+}
+
+/* ================= CART ================= */
+
+.cart {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 390px;
+max-width: 95%;
+height: 100vh;
+background: white;
+z-index: 3000;
+box-shadow: 0 0 25px rgba(0,0,0,.15);
+padding: 25px;
+overflow-y: auto;
+}
+
+.cart-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 25px;
+}
+
+.cart-header h2 {
+color: #4f6653;
+}
+
+.cart-close {
+border: none;
+background: transparent;
+font-size: 25px;
+cursor: pointer;
+}
+
+.cart-item {
+border-bottom: 1px solid #eee;
+padding: 15px 0;
+}
+
+.cart-item h4 {
+margin-bottom: 7px;
+}
+
+.cart-item small {
+color: #777;
+}
+
+.cart-controls {
+display: flex;
+align-items: center;
+gap: 10px;
+margin-top: 10px;
+}
+
+.cart-controls button {
+border: none;
+background: #eef2ed;
+width: 28px;
+height: 28px;
+border-radius: 50%;
+cursor: pointer;
+}
+
+.remove {
+margin-right: auto;
+color: #a55;
+background: transparent !important;
+}
+
+.cart-total {
+margin-top: 25px;
+font-size: 21px;
+font-weight: bold;
+color: #4f6653;
+}
+
+.checkout {
+width: 100%;
+border: none;
+background: #5c725f;
+color: white;
+padding: 14px;
+border-radius: 25px;
+margin-top: 18px;
+cursor: pointer;
+font-size: 15px;
+}
+
+/* ================= NO RESULTS ================= */
+
+.no-results {
+text-align: center;
+padding: 40px;
+color: #888;
+display: none;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+background: #4f6653;
+color: white;
+text-align: center;
+padding: 25px;
+font-size: 14px;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+header {
+padding: 16px 5%;
+}
+
+nav {
+display: none;
+}
+
+.hero {
+flex-direction: column;
+text-align: center;
+padding: 50px 7%;
+}
+
+.hero-text h1 {
+font-size: 45px;
+}
+
+.hero-decoration {
+font-size: 95px;
+}
+
+.products {
+grid-template-columns: repeat(2, 1fr);
+gap: 12px;
+}
+
+.product {
+padding: 10px;
+}
+
+.product-image {
+height: 180px;
+}
+
+.product h3 {
+font-size: 15px;
+}
+
+.price {
+font-size: 17px;
+}
+}
+</style>
+</head>
+
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<div class="logo">cupella</div>
+
+<nav>
+<a href="#home">الرئيسية</a>
+<a href="#products">الأكواب</a>
+<a href="#about">عن المتجر</a>
+<a href="#contact">تواصل معنا</a>
+</nav>
+
+<div class="header-icons">
+
+<button class="icon-button" onclick="openCart()">
+🛒
+<span class="cart-count" id="cartCount">0</span>
+</button>
+
+</div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+<div class="hero-text">
+
+<h1>cupella</h1>
+
+<h2>أكواب تضيف لمستك الخاصة ☕🌷</h2>
+
+<p>
+اختاري كوبك المفضل من مجموعتنا المختارة،
+وخلي تفاصيل يومك أجمل مع cupella.
+</p>
+
+<a href="#products" class="shop-button">
+تسوقي الآن
+</a>
+
+</div>
+
+<div class="hero-decoration">
+🌷☕🌸
+</div>
+
+</section>
+
+
+<!-- ================= SEARCH ================= -->
+
+<section class="search-section">
+
+<div class="search-box">
+
+<span>🔎</span>
+
+<input
+type="text"
+id="searchInput"
+placeholder="ابحثي عن اسم الكوب..."
+oninput="searchProducts()"
+>
+
+</div>
+
+</section>
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section class="products-section" id="products">
+
+<div class="section-title">
+
+<h2>أكوابنا</h2>
+
+<p>
+اختاري كوبك المفضل 🤍
+</p>
+
+</div>
+
+
+<div class="products" id="productsContainer"></div>
+
+<div class="no-results" id="noResults">
+ما لقينا منتج بهذا الاسم 🤍
+</div>
+
+</section>
+
+
+<!-- ================= SUGGESTIONS ================= -->
+
+<section class="suggestions">
+
+<h2>قد يعجبك أيضًا 🌷</h2>
+
+<div class="products" id="suggestionsContainer"></div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+<h2>عن cupella 🌸</h2>
+
+<p>
+في cupella نختار لكم أكواب مميزة تجمع بين
+الجمال والبساطة، عشان يكون كوبك جزء من
+تفاصيل يومك الجميلة.
+</p>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+<h2>تواصلي معنا 🤍</h2>
+
+<p>
+للطلب والاستفسار تواصلي معنا عبر واتساب.
+</p>
+
+<p class="delivery-note">
+🚚 التوصيل متاح داخل الرياض فقط
+</p>
+
+<a
+href="https://wa.me/966581376846"
+target="_blank">
+💬 واتساب
+</a>
+
+</section>
+
+
+<!-- ================= PRODUCT MODAL ================= -->
+
+<div class="modal" id="productModal">
+
+<div class="modal-content">
+
+<button class="close" onclick="closeProduct()">
+×
+</button>
+
+<div class="modal-image" id="modalImage">
+صورة المنتج
+</div>
+
+<h2 id="modalName"></h2>
+
+<p id="modalDescription"></p>
+
+<div class="price" id="modalPrice"></div>
+
+<div id="variantArea"></div>
+
+<button
+class="order-button"
+onclick="addFromModal()">
+أضيفي للسلة 🛒
+</button>
+
+</div>
+
+</div>
+
+
+<!-- ================= CART ================= -->
+
+<div class="cart" id="cart">
+
+<div class="cart-header">
+
+<h2>سلة مشترياتك 🛒</h2>
+
+<button
+class="cart-close"
+onclick="closeCart()">
+×
+</button>
+
+</div>
+
+<div id="cartItems"></div>
+
+<div class="cart-total">
+المجموع:
+<span id="cartTotal">0 ﷼</span>
+</div>
+
+<button
+class="checkout"
+onclick="checkoutWhatsApp()">
+إتمام الطلب عبر واتساب
+</button>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+© 2026 cupella
+
+<br><br>
+
+أكواب جميلة، تفاصيل أجمل 🌷
+
+</footer>
+
+
+<script>
+
+/* =================================================
+PRODUCTS
+================================================= */
+
+const products = [
+
+{
+id: 1,
+name: "كوب سيراميك ماعز",
+description: "اللون: أبيض",
+price: 21,
+stock: 3,
+image: "",
+variants: null
+},
+
+{
+id: 2,
+name: "كوب سيراميك قط",
+description: "اللون: أبيض",
+price: 21,
+stock: 3,
+image: "",
+variants: null
+},
+
+{
+id: 3,
+name: "كوب سيراميك دب",
+description: "اللون: بني",
+price: 21,
+stock: 3,
+image: "",
+variants: null
+},
+
+{
+id: 4,
+name: "كوب سيراميك فتاة",
+description: "الألوان: أصفر + برتقالي",
+price: 21,
+stock: 2,
+image: "",
+variants: null
+},
+
+{
+id: 5,
+name: "كوب مع صحن غيوم",
+description: "اللون: وردي",
+price: 25,
+stock: 3,
+image: "",
+variants: null
+},
+
+{
+id: 6,
+name: "كوب مع صحن ورود زرقاء",
+description: "اللون: أبيض",
+price: 25,
+stock: 2,
+image: "",
+variants: null
+},
+
+{
+id: 7,
+name: "كوب مع صحن فخار مع كتابة",
+description: "اختاري اللون المناسب لك",
+price: 25,
+stock: 4,
+image: "",
+
+variants: [
+{
+name: "أزرق غامق",
+stock: 2
+},
+{
+name: "أزرق فاتح",
+stock: 2
+}
+]
+}
+
+];
+
+
+/* =================================================
+CART
+================================================= */
+
+let cart = [];
+
+let selectedProduct = null;
+
+
+/* =================================================
+DISPLAY PRODUCTS
+================================================= */
+
+function displayProducts(list, containerId) {
+
+const container =
+document.getElementById(containerId);
+
+container.innerHTML = "";
+
+list.forEach(product => {
+
+const card = document.createElement("div");
+
+card.className = "product";
+
+card.onclick = function() {
+openProduct(product.id);
+};
+
+
+card.innerHTML = `
+
+<div class="product-image">
+
+${
+product.image
+?
+`<img src="${product.image}" alt="${product.name}">`
+:
+"صورة المنتج"
+}
+
+</div>
+
+
+<h3>
+${product.name}
+</h3>
+
+
+<p class="product-description">
+${product.description}
+</p>
+
+
+<div class="price">
+${product.price} ﷼
+</div>
+
+
+<div class="stock">
+${
+product.stock > 0
+?
+`متوفر: ${product.stock}`
+:
+"غير متوفر حاليًا"
+}
+</div>
+
+
+<button
+class="order-button"
+onclick="event.stopPropagation(); quickAdd(${product.id})"
+${product.stock <= 0 ? "disabled" : ""}
+>
+أضيفي للسلة
+</button>
+
+`;
+
+
+container.appendChild(card);
+
+});
+
+}
+
+
+/* =================================================
+INITIAL DISPLAY
+================================================= */
+
+displayProducts(
+products,
+"productsContainer"
+);
+
+
+/* =================================================
+SUGGESTIONS
+================================================= */
+
+displayProducts(
+products.slice(0, 4),
+"suggestionsContainer"
+);
+
+
+/* =================================================
+SEARCH
+================================================= */
+
+function searchProducts() {
+
+const search =
+document
+.getElementById("searchInput")
+.value
+.trim()
+.toLowerCase();
+
+
+const filtered =
+products.filter(product =>
+product.name
+.toLowerCase()
+.includes(search)
+);
+
+
+displayProducts(
+filtered,
+"productsContainer"
+);
+
+
+document.getElementById("noResults").style.display =
+filtered.length === 0
+? "block"
+: "none";
+
+}
+
+
+/* =================================================
+OPEN PRODUCT
+================================================= */
+
+function openProduct(id) {
+
+selectedProduct =
+products.find(product => product.id === id);
+
+
+document.getElementById("modalName").textContent =
+selectedProduct.name;
+
+
+document.getElementById("modalDescription").textContent =
+selectedProduct.description;
+
+
+document.getElementById("modalPrice").textContent =
+selectedProduct.price + " ﷼";
+
+
+const variantArea =
+document.getElementById("variantArea");
+
+
+variantArea.innerHTML = "";
+
+
+if (selectedProduct.variants) {
+
+let options = "";
+
+selectedProduct.variants.forEach((variant, index) => {
+
+options += `
+<option value="${index}">
+${variant.name}
+</option>
+`;
+
+});
+
+
+variantArea.innerHTML = `
+
+<label class="variant-label">
+اختاري اللون:
+</label>
+
+<select
+id="variantSelect"
+class="variant-select">
+
+${options}
+
+</select>
+
+`;
+
+}
+
+
+document.getElementById("productModal").style.display =
+"flex";
+
+}
+
+
+/* =================================================
+CLOSE PRODUCT
+================================================= */
+
+function closeProduct() {
+
+document.getElementById("productModal").style.display =
+"none";
+
+}
+
+
+/* =================================================
+QUICK ADD
+================================================= */
+
+function quickAdd(id) {
+
+const product =
+products.find(product => product.id === id);
+
+
+if (product.variants) {
+
+openProduct(id);
+
+} else {
+
+addToCart(product, null);
+
+}
+
+}
+
+
+/* =================================================
+ADD FROM MODAL
+================================================= */
+
+function addFromModal() {
+
+if (!selectedProduct) return;
+
+
+let variant = null;
+
+
+if (selectedProduct.variants) {
+
+const selectedIndex =
+document.getElementById("variantSelect").value;
+
+
+variant =
+selectedProduct.variants[selectedIndex];
+
+}
+
+
+addToCart(
+selectedProduct,
+variant
+);
+
+
+closeProduct();
+
+}
+
+
+/* =================================================
+ADD TO CART
+================================================= */
+
+function addToCart(product, variant) {
+
+let availableStock =
+variant
+? variant.stock
+: product.stock;
+
+
+let existing =
+cart.find(item =>
+item.id === product.id &&
+(
+(!item.variant && !variant) ||
+(item.variant === variant?.name)
+)
+);
+
+
+if (existing) {
+
+if (existing.quantity >= availableStock) {
+
+alert("ما نقدر نضيف كمية أكثر من المتوفر 🤍");
+
+return;
+
+}
+
+existing.quantity++;
+
+} else {
+
+cart.push({
+
+id: product.id,
+
+name: product.name,
+
+price: product.price,
+
+variant: variant
+? variant.name
+: null,
+
+quantity: 1
+
+});
+
+}
+
+
+updateCart();
+
+alert("تمت إضافة المنتج للسلة 🛒🤍");
+
+}
+
+
+/* =================================================
+UPDATE CART
+================================================= */
+
+function updateCart() {
+
+const container =
+document.getElementById("cartItems");
+
+
+container.innerHTML = "";
+
+
+let total = 0;
+
+let count = 0;
+
+
+cart.forEach((item, index) => {
+
+total +=
+item.price * item.quantity;
+
+
+count +=
+item.quantity;
+
+
+container.innerHTML += `
+
+<div class="cart-item">
+
+<h4>
+${item.name}
+</h4>
+
+${
+item.variant
+?
+`<small>اللون: ${item.variant}</small>`
+:
+""
+}
+
+<br>
+
+<small>
+${item.price} ﷼
+</small>
+
+
+<div class="cart-controls">
+
+<button
+onclick="changeQuantity(${index}, 1)">
++
+</button>
+
+<span>
+${item.quantity}
+</span>
+
+<button
+onclick="changeQuantity(${index}, -1)">
+−
+</button>
+
+
+<button
+class="remove"
+onclick="removeItem(${index})">
+حذف
+</button>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+
+document.getElementById("cartTotal").textContent =
+total + " ﷼";
+
+
+document.getElementById("cartCount").textContent =
+count;
+
+}
+
+
+/* =================================================
+CHANGE QUANTITY
+================================================= */
+
+function changeQuantity(index, amount) {
+
+const item = cart[index];
+
+const product =
+products.find(product => product.id === item.id);
+
+
+let maxStock =
+product.stock;
+
+
+if (item.variant) {
+
+const variant =
+product.variants.find(
+variant => variant.name === item.variant
+);
+
+maxStock =
+variant.stock;
+
+}
+
+
+if (
+amount > 0 &&
+item.quantity >= maxStock
+) {
+
+alert("وصلتي للكمية المتوفرة 🤍");
+
+return;
+
+}
+
+
+item.quantity += amount;
+
+
+if (item.quantity <= 0) {
+
+cart.splice(index, 1);
+
+}
+
+
+updateCart();
+
+}
+
+
+/* =================================================
+REMOVE
+================================================= */
+
+function removeItem(index) {
+
+cart.splice(index, 1);
+
+updateCart();
+
+}
+
+
+/* =================================================
+OPEN CART
+================================================= */
+
+function openCart() {
+
+document.getElementById("cart").style.display =
+"block";
+
+}
+
+
+/* =================================================
+CLOSE CART
+================================================= */
+
+function closeCart() {
+
+document.getElementById("cart").style.display =
+"none";
+
+}
+
+
+/* =================================================
+WHATSAPP CHECKOUT
+================================================= */
+
+function checkoutWhatsApp() {
+
+if (cart.length === 0) {
+
+alert("السلة فاضية 🤍");
+
+return;
+
+}
+
+
+let message =
+"السلام عليكم، أبغى أطلب من cupella 🌷☕️%0A%0A";
+
+
+let total = 0;
+
+
+cart.forEach(item => {
+
+message +=
+"• " +
+item.name;
+
+
+if (item.variant) {
+
+message +=
+" - اللون: " +
+item.variant;
+
+}
+
+
+message +=
+" × " +
+item.quantity +
+" = " +
+(item.price * item.quantity) +
+" ﷼%0A";
+
+
+total +=
+item.price * item.quantity;
+
+});
+
+
+message +=
+"%0Aالمجموع: " +
+total +
+" ﷼";
+
+
+message +=
+"%0A%0A📍 التوصيل داخل الرياض فقط";
+
+
+const whatsappNumber =
+"966581376846";
+
+
+const url =
+"https://wa.me/" +
+whatsappNumber +
+"?text=" +
+message;
+
+
+window.open(
+url,
+"_blank"
+);
+
+}
+
+</script>
+
+</body>
+</html>
